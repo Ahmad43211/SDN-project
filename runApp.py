@@ -9,7 +9,7 @@ from mininet.net import Mininet
 from mininet.node import Controller,OVSKernelSwitch,RemoteController
 from os import environ
 import sys
-sys.path.append("//home//ahmad//mininet//custom//my_project")
+sys.path.append("//home//ahmad//mininet//custom//my_network")
 from customtopology import customTopology
 POXDIR = environ[ 'HOME' ] + '/pox'
 
@@ -20,8 +20,8 @@ POXDIR = environ[ 'HOME' ] + '/pox'
 
 def topoglogyWithControllers():
     topo = customTopology()
-    c0 = RemoteController( 'c0', port=6000 )
-    c1 = RemoteController( 'c1', port=6001 )
+    c0 = RemoteController( 'c0', port=5000 )
+    c1 = RemoteController( 'c1', port=5001 )
     net = Mininet( topo=topo)
 
     

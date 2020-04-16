@@ -11,7 +11,7 @@ def generatePackets():
     x=IP(src='10.0.0.1',dst='10.0.0.9')/UDP()
 
 
-    send(x*1000)
+    send(x*10000)
     
  
 if __name__ == '__main__':

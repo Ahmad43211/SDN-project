@@ -8,9 +8,11 @@ you can run this script from any node you want'''
         
     
 def generatePackets():
-    
-    x=IP(dst='10.0.0.9')/UDP()
-    send(x*1000)
+    #for i in range(1,100):
+    #for i in range(1,100):
+    x=IP(dst='10.0.0.2')/ICMP()
+
+    send(x*20)
     
  
 if __name__ == '__main__':

@@ -14,7 +14,7 @@ class customTopology( Topo):
         s5= self.addSwitch( 's5')
         s6= self.addSwitch( 's6')
     
-    
+        
         hosts1 = [ self.addHost( 'h%d' % n ) for n in  range( 1, 5 ) ]
 
         hosts2 = [ self.addHost( 'h%d' % n ) for n in  range( 5, 9 ) ]
@@ -26,6 +26,7 @@ class customTopology( Topo):
     
         for h in hosts1:
             self.addLink( s1, h )
+        
         for h in hosts2:
             self.addLink( s2, h )
         for h in hosts3:
